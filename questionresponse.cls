@@ -1,11 +1,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                Introduction
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This class (questionresponse.cls) is to define the layout/structure of the template questionresponse.tex.
+% This class (questionresponse.cls) defines the layout/structure of a question and response document (e.g., worksheet, quiz, exam), and defines a command for identifying the content of questions and their corresponding responses agnostically to their formatting.
 % All content should go in the template file (questionresponse.tex), not this file.
 
-% Note that this class extra indentation to any generated reference section.
-% To reset the reference section indentation, \setlength{\leftskip}{0em} must be added to the end of the document.
+% This class adds extra indentation to any Pandoc-generated reference section.
+% To reset the reference section indentation, the following code must be added to the end of any Markdown document on which Pandoc citeproc is run:
+%		\setlength{\leftskip}{0em} 
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                Identification

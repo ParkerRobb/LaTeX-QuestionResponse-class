@@ -10,7 +10,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                Identification
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ProvidesClass{questionresponse}[2024-03-02 Class for formatting questions and responses]
+\ProvidesClass{questionresponse}[2024-03-04 Class for formatting questions and responses]
 \NeedsTeXFormat{LaTeX2e}
 
 
@@ -18,7 +18,10 @@
 %                Settings
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \LoadClass{scrartcl}					% KOMA-script article class
-\KOMAoptions{DIV=15}					% Expands type area
+\KOMAoptions{
+	DIV=15, 							% Expands type area
+	parskip=half						% Sets \parskip (copied from default.latex Pandoc template)
+}					
 \setlength{\leftskip}{1.5em}			% Indents entire paragraph
 \setlength{\parindent}{-\leftskip}		% Creates hanging indent by reversing the effect of \leftskip on the first line of a paragraph
 
@@ -27,9 +30,20 @@
 %                Packages
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{indentfirst}			% Applies indentation rules to first paragraph (LaTeX by default does not indent first paragraphs of sections)
+\RequirePackage{xparse}					% Extends command optional argument customizability
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                Body
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\NewDocumentCommand{\Question}{m o}{
+	\filbreak
+	
+	#1
+	
+	\IfNoValueF{#2}{
+		\begin{quote}
+			#2
+		\end{quote}
+	}
+}

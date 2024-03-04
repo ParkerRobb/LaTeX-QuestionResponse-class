@@ -20,7 +20,7 @@
 \LoadClass{scrartcl}					% KOMA-script article class
 \KOMAoptions{DIV=15}					% Expands type area
 \setlength{\leftskip}{1.5em}			% Indents entire paragraph
-\setlength{\parindent}{-1.5em}			% Creates hanging indent by reversing the effect of \leftskip on the first line of a paragraph
+\setlength{\parindent}{-\leftskip}		% Creates hanging indent by reversing the effect of \leftskip on the first line of a paragraph
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -24,13 +24,14 @@
 	DIV=15, 							% Expands type area
 	parskip=half						% Sets \parskip (copied from default.latex Pandoc template)
 }					
-\setlength{\leftskip}{1.5em}			% Indents entire paragraph
-\setlength{\parindent}{-\leftskip}		% Creates hanging indent by reversing the effect of \leftskip on the first line of a paragraph
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                Packages
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage[document]{ragged2e}				% Sets whole document to ragged right (left-aligned)
+	\setlength{\RaggedRightLeftskip}{1.5em}		% Indents entire paragraph
+	\setlength{\RaggedRightParindent}{-\RaggedRightLeftskip}	% Creates hanging indent by reversing the effect of \RaggedRightLeftskip on the first line of a paragraph
 \RequirePackage{indentfirst}			% Applies indentation rules to first paragraph (LaTeX by default does not indent first paragraphs of sections)
 \RequirePackage{xparse}					% Extends command optional argument customizability
 

@@ -32,6 +32,9 @@
 \RequirePackage[document]{ragged2e}				% Sets whole document to ragged right (left-aligned)
 	\setlength{\RaggedRightLeftskip}{1.5em}		% Indents entire paragraph
 	\setlength{\RaggedRightParindent}{-\RaggedRightLeftskip}	% Creates hanging indent by reversing the effect of \RaggedRightLeftskip on the first line of a paragraph
+\deffootnote[1em]{1.5em}{1em}{%					% Resets KOMA-script footnote definition to default indents and style (from KOMA-script manual)
+	\textsuperscript{\thefootnotemark}%
+}
 \RequirePackage{indentfirst}			% Applies indentation rules to first paragraph (LaTeX by default does not indent first paragraphs of sections)
 \RequirePackage{xparse}					% Extends command optional argument customizability
 

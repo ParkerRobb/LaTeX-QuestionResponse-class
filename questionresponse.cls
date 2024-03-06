@@ -55,3 +55,17 @@
 		\end{quote}
 	}
 }
+
+
+%	\globalsetlength{length}{value}					% Global version of \setlength command that works inside a group [@bersWhySetlengthIneffective2016]
+\makeatletter
+\newlength\local@length@for@global
+\newcommand\globalsetlength[2]{%
+	\setlength{\local@length@for@global}{#2}%
+	\global#1\local@length@for@global
+}
+\makeatother
+%	\ReformatReferenceSection
+\newcommand{\ReformatReferenceSection}{
+	\globalsetlength{\leftskip}{0em} 				% \setlength doesn't work because it operates locally to the {}
+}

@@ -65,7 +65,7 @@
 	\global#1\local@length@for@global
 }
 \makeatother
-%	\ReformatReferenceSection
-\newcommand{\ReformatReferenceSection}{
+%	\ResetRefSec
+\newcommand{\ResetRefSec}{
 	\globalsetlength{\leftskip}{0em} 				% \setlength doesn't work because it operates locally to the {}
 }

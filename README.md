@@ -28,7 +28,7 @@ To create a fillable worksheet with space for handwritten answers, insert some `
 #### Pandoc `citeproc` side effect
 
 Because Pandoc includes the reference section it generates in the main body of its intermediary LaTeX document, this class adds extra indentation to any Pandoc-generated reference section as a side effect.
-If running Pandoc `citeproc` on a Markdown document, add the `\ReformatReferenceSection` command provided by this class to the end of the document to reset the reference section indentation.
+If running Pandoc `citeproc` on a Markdown document, add the `\ResetRefSec` command provided by this class to the end of the document to reset the reference section indentation.
 
 ### LaTeX
 
